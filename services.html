@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobil Notariat</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.min.css" integrity="sha512-/k/mL9TQSZHAqtVqXJAiy5bt2w1P7gxdra0UlnFjVHF9a/LC2vxt7otx3BMcn79V/DZsPRwdw8tPlwbElMnIAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="mn-preloader">
+        <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+    </div>
+    <!-- Preloader End -->
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__content__group">
+                    <div class="header__content__group__item">
+                        <a href="index.html" class="header__logo">
+                            <img class="d-mobile-none" src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__content__group grow">
+                    <div class="header__content__group__item">
+                        <ul class="header__menu-list">
+                            <li>
+                                <a href="about.html">Haqqımızda</a>
+                            </li>
+                            <li>
+                                <a class="active" href="services.html">Xidmətlər</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="blogs.html">Bloq</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Əlaqə</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__content__group">
+                    <div class="header__content__group__item d-mobile-flex">
+                        <button class="mn-btn mn-btn--primary">
+                            <span>Daxil ol</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.2998 12H20.2998M20.2998 12L14.2998 6M20.2998 12L14.2998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main main--services">
+        <section class="section section--services">
+            <div class="container">
+                <div class="section__content">
+                    <div class="section__header section__header--center">
+                        <div class="section__header__content">
+                            <div class="mn-breadcrumbs">
+                                <a href="index.html" class="mn-breadcrumbs__item">Ana səhifə</a>
+                                <span class="mn-breadcrumbs__delimiter"> / </span>
+                                <span class="mn-breadcrumbs__item mn-breadcrumbs__item--current">Xidmətlər</span>
+                            </div>
+                            <h1 class="section__header__title">Bizim xidmətlərimiz<span class="mn-dot">.</span> </h1>
+                        </div>
+                        <div class="section__search">
+                            <div class="mn-search">
+                                <input id="searchService" class="mn-search__input" type="text" name="searchService" placeholder="Xidmət axtar...">
+                                <div class="mn-search__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <circle cx="12.2998" cy="11.5" r="9.5" stroke="#7187CC" stroke-width="2" />
+                                        <path d="M19.2998 18.5L22.7998 22" stroke="#7187CC" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mn-tags">
+                                <span class="mn-tags__item" data-key="avtomobil üçün"># Avtomobil üçün</span>
+                                <span class="mn-tags__item" data-key="daşınmaz əmlak"># Daşınmaz əmlak</span>
+                                <span class="mn-tags__item" data-key="generalnıy"># Generalnıy</span>
+                                <span class="mn-tags__item" data-key="doverennost"># Doverennost</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid section__body">
+                        <div class="mn-tabs" data-filter-group="type">
+                            <button class="mn-tabs__item" data-filter="*">Bütün xidmətlər</button>
+                            <button class="mn-tabs__item" data-filter=".attorney">Etibarnamələr</button>
+                            <button class="mn-tabs__item" data-filter=".application">Ərizələr</button>
+                            <button class="mn-tabs__item" data-filter=".contract">Müqavilələr</button>
+                        </div>
+                        <div class="mn-services">
+                            <div class="mn-services__card green attorney">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/attorney.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Nəqliyyatdan istifadə etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə nəqliyyat vasitəsini müəyyən bir müddət ərzində istifadə etmək hüququnu verən və notarius tərəfindən təsdiq edilən rəsmi sənəddir.</p>
+                                    <span class="mn-hidden">Avtomobil üçün, Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green attorney">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/attorney.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Nəqliyyata sərəncam etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Etibar edən şəxsin adından mülkiyyətində olan (həmçinin ona etibar edilmiş) nəqliyyat vasitələrinin özgəninkiləşdirilməsinə dair (bağışlamaq, sərəncam vermək) həmçinin ipoteka qoymaq kimi səlahiyyətləri digər şəxslərə ötürən və notarius tərəfindən təsdiq edilən vəkalətdir. Qeyd etmək lazımdır ki, adıçəkilən etibarnamələr bir ildən artıq müddətə verilə bilməz.</p>
+                                    <span class="mn-hidden">Avtomobil üçün, Nəqliyyata sərəncam etibarnaməsi, Doverennost, Generalnıy</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card sky-blue application">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Ərizə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Azyaşlının ölkəni tərk etməsi üçün razılıq ərizəsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Valideyn, övladlığa götürən, qəyyum və himayəçilər tərəfindən yetkinlik yaşına çatmamış şəxslərin ölkəni tərk etməsinə icazə verən rəsmi sənəddir.</p>
+                                </div>
+                            </div>
+                            <div class="mn-services__card sky-blue application">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Ərizə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Daşınmaz əmlaka sərəncam ərizəsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Mülkiyyətçinin daşınmaz əmlak üzərindəki səlahiyyətlərini , (özgəninkiləşdirmə, ipoteka və sonrakı ipoteka qoyma haqqında müqavilə və həmin müqavilədə dəyişiklik və onun ləğv edilməsi haqqında müqavilələr,), digər bir şəxsə ötürməsinə razılıq verən və notariat qaydasında təsdiq edilən sənəddir.</p>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green attorney">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Bank etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə onun adından bank əməliyyatları aparmaq (məsələn, hesab açmaq, bank hesablardakı pul vəsaitlərini nəğdləşdirmək köçürmələr etmək) üçün verdiyi hüquqi səlahiyyəti təsdiq edən və notariat qaydasında təsdiq edilən sənəddir.</p>
+                                    <span class="mn-hidden">Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green attorney">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Daşınmaz əmlaka sərəncam etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə daşınmaz əmlakı özgəninkiləşdirmək , kirayə vermək və digər səlahiyyətlərin verilməsini nəzərədə tutan və notariat qaydasında təsdiq edilən sənəddir.</p>
+                                    <span class="mn-hidden">Generalnıy, Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green attorney">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Vəkil etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin vəkilə onun adından hüquqi məsələləri həll etmək, məhkəmədə təmsil etmək və digər hüquqi əməliyyatları aparmaq üçün verdiyi hüquqi səlahiyyəti təsdiq edən sənəddir.</p>
+                                    <span class="mn-hidden">Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card pink contract">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Müqavilə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Kirayə müqaviləsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Kirayəçi və kirayəyə vərən şəxs arasında yaşayış sahasəndən istifadəyə dair hüquq münasibətlərini təmziləyən müqavilədir.</p>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green attorney">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Qurumlarda təmsilçilik etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə onun adından müxtəlif təşkilat və qurumlarda çıxış etmək səlahiyyətini verən və notariat qaydasında təsdiq edilən rəsmi sənəddir.</p>
+                                    <span class="mn-hidden">Doverennost</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__footer">
+                        <a class="mn-btn mn-btn--lg" href="services.html">
+                            <span>Bütün xidmətlər</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img class="mn-pattern mn-pattern--1" src="./assets/images/patterns/vector-1.svg" alt="Mobil Notariat">
+        </section>
+    </main>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__body footer__body--primary">
+                    <div class="footer__logo">
+                        <a href="index.html">
+                            <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+                        </a>
+                        <p>Notariat hərəkətlərin elektron qaydada aparılması və sənədlərin 24/7 rejimdə rəsmiləşdirilməsi.</p>
+                    </div>
+                    <div class="footer__block">
+                        <div class="footer__block__item">
+                            <span class="footer__block__item__title">Əməliyyatlar</span>
+                            <ul class="footer__block__item__list">
+                                <li>
+                                    <a href="#">FİN və barkod ilə sənəd yoxlama</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vərəsəlik işlərinin yoxlanılması</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__block__item">
+                            <span class="footer__block__item__title">Məlumat</span>
+                            <ul class="footer__block__item__list">
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Notariat hərəkətləri haqqında</a>
+                                </li>
+                                <li>
+                                    <a href="#">Notariusların siyahısı</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__block__item">
+                            <span class="footer__block__item__title">Əlaqə</span>
+                            <ul class="footer__block__item__list">
+                                <li>
+                                    <span>Qaynar xətt - </span>
+                                    <a href="tel:880">880</a>
+                                </li>
+                                <li>
+                                    <span>E-poçt - </span>
+                                    <a href="mailto:enotary@justice.gov.az">enotary@justice.gov.az</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__body footer__body--secondary">
+                    <div class="mn-copyright"> All rights reserver | Sənədlərin elektron rəsmiləşdi | 2024 </div>
+                    <ul class="mn-social-list">
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/facebook-messenger.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/whatsapp.svg" alt="whatsapp">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/x.svg" alt="x">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/tiktok.svg" alt="tiktok">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <!-- Header end -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js" integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

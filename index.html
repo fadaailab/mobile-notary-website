@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobil Notariat</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.min.css" integrity="sha512-/k/mL9TQSZHAqtVqXJAiy5bt2w1P7gxdra0UlnFjVHF9a/LC2vxt7otx3BMcn79V/DZsPRwdw8tPlwbElMnIAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <!-- Modals -->
+    <div class="mn-modal mn-modal--fade mn-modal--closeable mn-modal--md mn-modal--download" id="modalDownload">
+        <div class="mn-modal__dialog">
+            <div class="mn-modal__content mn-modal__content--phone">
+                <button class="mn-modal__close" data-close="modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <rect width="30" height="30" rx="15" fill="#F0F0F0" />
+                        <path d="M19.492 9.375L15 13.867L10.508 9.375L9.375 10.508L13.867 15L9.375 19.492L10.508 20.625L15 16.133L19.492 20.625L20.625 19.492L16.133 15L20.625 10.508L19.492 9.375Z" fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5084 8.78574L15.0004 13.2777L19.4924 8.78574L21.2146 10.508L16.7227 15L21.2146 19.492L19.4924 21.2142L15.0004 16.7223L10.5084 21.2142L8.78613 19.492L13.2781 15L8.78613 10.508L10.5084 8.78574ZM9.96464 10.508L14.4566 15L9.96464 19.492L10.5084 20.0357L15.0004 15.5438L19.4924 20.0357L20.0361 19.492L15.5442 15L20.0361 10.508L19.4924 9.96425L15.0004 14.4562L10.5084 9.96425L9.96464 10.508Z" fill="black" />
+                    </svg>
+                </button>
+                <div class="mn-modal__body">
+                    <div class="mn-download">
+                        <img class="mn-download__qr" src="https://via.placeholder.com/156" alt="qr">
+                        <div class="mn-download__content">
+                            <span class="mn-download__title">Tətbiqi yükləyin</span>
+                            <p class="mn-download__desc">Nec ullamcorper praesent enim cras. Sem quam condimentum commodo mauris in. Venenatis vivamus cras risus dignissim tempor.</p>
+                        </div>
+                        <div class="mn-download__platforms">
+                            <img src="./assets/images/download-now/app-store.png" alt="app store">
+                            <img src="./assets/images/download-now/google-play.png" alt="google play store">
+                            <img src="./assets/images/download-now/app-gallery.png" alt="app gallery">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals -->
+    <!-- Preloader -->
+    <div class="mn-preloader">
+        <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+    </div>
+    <!-- Preloader  -->
+    <!-- Header  -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__content__group">
+                    <div class="header__content__group__item">
+                        <a href="index.html" class="header__logo">
+                            <img class="d-mobile-none" src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__content__group grow">
+                    <div class="header__content__group__item">
+                        <ul class="header__menu-list">
+                            <li>
+                                <a href="about.html">Haqqımızda</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Xidmətlər</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="blogs.html">Bloq</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Əlaqə</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__content__group">
+                    <div class="header__content__group__item d-mobile-flex">
+                        <button class="mn-btn mn-btn--primary">
+                            <span>Daxil ol</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.2998 12H20.2998M20.2998 12L14.2998 6M20.2998 12L14.2998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header  -->
+    <!-- Main -->
+    <main class="main main--services">
+        <!--  Welcome  -->
+        <section class="section section--welcome">
+            <div class="container">
+                <div class="section__content section__content--row">
+                    <div class="section__header">
+                        <div class="section__header__content">
+                            <h1 class="section__header__title"> Etibarnamə və ərizələrin <span class="mn-highlight">elektron</span> rəsmiləşdirilməsi </h1>
+                            <p class="section__header__desc">Bütün notariat hərəkətlərini veb-sayt üzərindən həyata keçirin.</p>
+                        </div>
+                        <a class="section__header__cta mn-btn mn-btn--primary mn-btn--lg" href="#">
+                            <span>Sənəd yarat</span>
+                        </a>
+                    </div>
+                    <div class="section__body">
+                        <div class="mn-stats">
+                            <div class="mn-stats__header"><strong>Sənəd yaratmaq </strong><span>lazımdır?</span> </div>
+                            <div class="mn-stats__body">
+                                <div class="mn-stats__card mn-stats__card--attorney">
+                                    <div class="mn-stats__card__icon">
+                                        <img src="./assets/icon/attorney.svg" alt="Etibarnamələr">
+                                    </div>
+                                    <div class="mn-stats__card__info">
+                                        <span class="mn-stats__card__title">Etibarnamələr</span>
+                                        <div class="mn-stats__card__count">000.000</div>
+                                        <a class="mn-stats__card__cta mn-btn mn-btn--sm" href="#">
+                                            <span>Etibarnamə yarat</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mn-stats__card mn-stats__card--application">
+                                    <div class="mn-stats__card__icon">
+                                        <img src="./assets/icon/application.svg" alt="Ərizələr">
+                                    </div>
+                                    <div class="mn-stats__card__info">
+                                        <span class="mn-stats__card__title">Ərizələr</span>
+                                        <div class="mn-stats__card__count">000.000</div>
+                                        <a class="mn-stats__card__cta mn-btn mn-btn--sm" href="#">
+                                            <span>Ərizə yarat</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="mn-pattern mn-pattern--1" src="./assets/images/patterns/vector-1.svg" alt="Mobil Notariat">
+        </section>
+        <!--  Welcome  -->
+        <!--  How it Works -->
+        <section class="section section--how-it-works">
+            <div class="section__content">
+                <div class="container">
+                    <div class="section__header">
+                        <div class="section__header__content">
+                            <h2 class="section__header__title">Necə işləyir?</h2>
+                            <p class="section__header__desc"> İstəyinizə uyğun xidməti seçərək <span class="mn-highlight mn-highlight--green">60 saniyə</span> ərzində necə işlədiyini görün. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="section__body">
+                        <div class="container">
+                            <div class="swiper swiper--how-it-works">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="mn-how-it-works__card blue">
+                                            <div class="mn-how-it-works__card__icon">
+                                                <img src="./assets/icon/question.svg" alt="Mobil Notariat nədir?">
+                                            </div>
+                                            <span class="mn-how-it-works__card__title"> Mobil Notariat nədir?</span>
+                                            <button class="mn-how-it-works__card__cta">
+                                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.62598 3.91494V13.2942C4.62598 14.1115 5.55318 14.5837 6.21415 14.103L12.6624 9.41332C13.2115 9.01397 13.2115 8.19519 12.6624 7.79584L6.21415 3.10621C5.55318 2.6255 4.62598 3.09765 4.62598 3.91494Z" fill="white" />
+                                                </svg>
+                                                <span>İndi bax</span>
+                                            </button>
+                                            <div class="mn-how-it-works__card__picture">
+                                                <img src="./assets/images/how-it-works/mobile-notary.png" alt="Etibarnamələr">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="mn-how-it-works__card pink">
+                                            <div class="mn-how-it-works__card__icon">
+                                                <img src="./assets/icon/document.svg" alt="Sənədlərin yoxlanılması">
+                                            </div>
+                                            <span class="mn-how-it-works__card__title"> Sənədlərin yoxlanılması</span>
+                                            <button class="mn-how-it-works__card__cta">
+                                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.62598 3.91494V13.2942C4.62598 14.1115 5.55318 14.5837 6.21415 14.103L12.6624 9.41332C13.2115 9.01397 13.2115 8.19519 12.6624 7.79584L6.21415 3.10621C5.55318 2.6255 4.62598 3.09765 4.62598 3.91494Z" fill="white" />
+                                                </svg>
+                                                <span>İndi bax</span>
+                                            </button>
+                                            <div class="mn-how-it-works__card__picture">
+                                                <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="mn-how-it-works__card green">
+                                            <div class="mn-how-it-works__card__icon">
+                                                <img src="./assets/icon/attorney.svg" alt="Etibarnamələr">
+                                            </div>
+                                            <span class="mn-how-it-works__card__title"> Etibarnamə necə verilir? </span>
+                                            <button class="mn-how-it-works__card__cta">
+                                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.62598 3.91494V13.2942C4.62598 14.1115 5.55318 14.5837 6.21415 14.103L12.6624 9.41332C13.2115 9.01397 13.2115 8.19519 12.6624 7.79584L6.21415 3.10621C5.55318 2.6255 4.62598 3.09765 4.62598 3.91494Z" fill="white" />
+                                                </svg>
+                                                <span>İndi bax</span>
+                                            </button>
+                                            <div class="mn-how-it-works__card__picture">
+                                                <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="mn-how-it-works__card orange">
+                                            <div class="mn-how-it-works__card__icon">
+                                                <img src="./assets/icon/application.svg" alt="Ərizələrin təsdiqlənməsi">
+                                            </div>
+                                            <span class="mn-how-it-works__card__title"> Ərizələrin təsdiqlənməsi </span>
+                                            <button class="mn-how-it-works__card__cta">
+                                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.62598 3.91494V13.2942C4.62598 14.1115 5.55318 14.5837 6.21415 14.103L12.6624 9.41332C13.2115 9.01397 13.2115 8.19519 12.6624 7.79584L6.21415 3.10621C5.55318 2.6255 4.62598 3.09765 4.62598 3.91494Z" fill="white" />
+                                                </svg>
+                                                <span>İndi bax</span>
+                                            </button>
+                                            <div class="mn-how-it-works__card__picture">
+                                                <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="mn-how-it-works__card sky-blue">
+                                            <div class="mn-how-it-works__card__icon">
+                                                <img src="./assets/icon/message.svg" alt="Müştərilərdən rəylər">
+                                            </div>
+                                            <span class="mn-how-it-works__card__title"> Müştərilərdən rəylər</span>
+                                            <button class="mn-how-it-works__card__cta">
+                                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.62598 3.91494V13.2942C4.62598 14.1115 5.55318 14.5837 6.21415 14.103L12.6624 9.41332C13.2115 9.01397 13.2115 8.19519 12.6624 7.79584L6.21415 3.10621C5.55318 2.6255 4.62598 3.09765 4.62598 3.91494Z" fill="white" />
+                                                </svg>
+                                                <span>İndi bax</span>
+                                            </button>
+                                            <div class="mn-how-it-works__card__picture">
+                                                <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  How it Works  -->
+        <!--  Services -->
+        <section class="section section--services">
+            <div class="container">
+                <div class="section__content">
+                    <div class="section__header section__header--center">
+                        <div class="section__header__content">
+                            <h1 class="section__header__title"> Bizim xidmətlərimiz<span class="mn-dot">.</span> </h1>
+                            <p class="section__header__desc">Xidməti seçərək bir neçə dəqiqə ərzində etibarnamə və ya ərizə yarada bilərsiniz.</p>
+                        </div>
+                        <div class="section__search">
+                            <div class="mn-search">
+                                <input id="searchService" class="mn-search__input" type="text" name="searchService" placeholder="Xidmət axtar...">
+                                <div class="mn-search__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <circle cx="12.2998" cy="11.5" r="9.5" stroke="#7187CC" stroke-width="2" />
+                                        <path d="M19.2998 18.5L22.7998 22" stroke="#7187CC" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mn-tags">
+                                <span class="mn-tags__item" data-key="avtomobil üçün"># Avtomobil üçün</span>
+                                <span class="mn-tags__item" data-key="daşınmaz əmlak"># Daşınmaz əmlak</span>
+                                <span class="mn-tags__item" data-key="generalnıy"># Generalnıy</span>
+                                <span class="mn-tags__item" data-key="doverennost"># Doverennost</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid section__body">
+                        <div class="mn-services">
+                            <div class="mn-services__card green">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/attorney.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Nəqliyyatdan istifadə etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə nəqliyyat vasitəsini müəyyən bir müddət ərzində istifadə etmək hüququnu verən və notarius tərəfindən təsdiq edilən rəsmi sənəddir.</p>
+                                    <span class="mn-hidden">Avtomobil üçün, Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/attorney.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Nəqliyyata sərəncam etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Etibar edən şəxsin adından mülkiyyətində olan (həmçinin ona etibar edilmiş) nəqliyyat vasitələrinin özgəninkiləşdirilməsinə dair (bağışlamaq, sərəncam vermək) həmçinin ipoteka qoymaq kimi səlahiyyətləri digər şəxslərə ötürən və notarius tərəfindən təsdiq edilən vəkalətdir. Qeyd etmək lazımdır ki, adıçəkilən etibarnamələr bir ildən artıq müddətə verilə bilməz.</p>
+                                    <span class="mn-hidden">Avtomobil üçün, Nəqliyyata sərəncam etibarnaməsi, Doverennost, Generalnıy</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card sky-blue">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Ərizə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Azyaşlının ölkəni tərk etməsi üçün razılıq ərizəsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Valideyn, övladlığa götürən, qəyyum və himayəçilər tərəfindən yetkinlik yaşına çatmamış şəxslərin ölkəni tərk etməsinə icazə verən rəsmi sənəddir.</p>
+                                </div>
+                            </div>
+                            <div class="mn-services__card sky-blue">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Ərizə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Daşınmaz əmlaka sərəncam ərizəsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Mülkiyyətçinin daşınmaz əmlak üzərindəki səlahiyyətlərini , (özgəninkiləşdirmə, ipoteka və sonrakı ipoteka qoyma haqqında müqavilə və həmin müqavilədə dəyişiklik və onun ləğv edilməsi haqqında müqavilələr,), digər bir şəxsə ötürməsinə razılıq verən və notariat qaydasında təsdiq edilən sənəddir.</p>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Bank etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə onun adından bank əməliyyatları aparmaq (məsələn, hesab açmaq, bank hesablardakı pul vəsaitlərini nəğdləşdirmək köçürmələr etmək) üçün verdiyi hüquqi səlahiyyəti təsdiq edən və notariat qaydasında təsdiq edilən sənəddir.</p>
+                                    <span class="mn-hidden">Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Daşınmaz əmlaka sərəncam etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə daşınmaz əmlakı özgəninkiləşdirmək , kirayə vermək və digər səlahiyyətlərin verilməsini nəzərədə tutan və notariat qaydasında təsdiq edilən sənəddir.</p>
+                                    <span class="mn-hidden">Generalnıy, Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Vəkil etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin vəkilə onun adından hüquqi məsələləri həll etmək, məhkəmədə təmsil etmək və digər hüquqi əməliyyatları aparmaq üçün verdiyi hüquqi səlahiyyəti təsdiq edən sənəddir.</p>
+                                    <span class="mn-hidden">Doverennost</span>
+                                </div>
+                            </div>
+                            <div class="mn-services__card pink">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Müqavilə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Kirayə müqaviləsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Kirayəçi və kirayəyə vərən şəxs arasında yaşayış sahasəndən istifadəyə dair hüquq münasibətlərini təmziləyən müqavilədir.</p>
+                                </div>
+                            </div>
+                            <div class="mn-services__card green">
+                                <div class="mn-services__card__icon">
+                                    <img src="./assets/icon/application.svg" alt="Etibarnamə">
+                                </div>
+                                <div class="mn-services__card__info">
+                                    <h3 class="mn-services__card__title">
+                                        <span>Qurumlarda təmsilçilik etibarnaməsi</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.13281 12H20.1328M20.1328 12L14.1328 6M20.1328 12L14.1328 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </h3>
+                                    <p class="mn-services__card__desc">Bir şəxsin digər şəxsə onun adından müxtəlif təşkilat və qurumlarda çıxış etmək səlahiyyətini verən və notariat qaydasında təsdiq edilən rəsmi sənəddir.</p>
+                                    <span class="mn-hidden">Doverennost</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__footer">
+                        <a class="mn-btn mn-btn--lg" href="services.html">
+                            <span>Bütün xidmətlər</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img class="mn-pattern mn-pattern--2" src="./assets/images/patterns/vector-2.svg" alt="Mobil Notariat">
+            <img class="mn-pattern mn-pattern--3" src="./assets/images/patterns/vector-3.svg" alt="Mobil Notariat">
+        </section>
+        <!--  Services -->
+        <!-- Download Now -->
+        <section class="section section--download-now">
+            <div class="container">
+                <div class="section__content">
+                    <div class="mn-banner">
+                        <div class="mn-banner__graphic">
+                            <img src="./assets/images/download-now/graphic.png" alt="Mobil Notariat">
+                        </div>
+                        <div class="mn-banner__content">
+                            <div class="mn-banner__rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                    <path d="M8.42777 4.50694C9.48331 2.6134 10.0111 1.66663 10.8001 1.66663C11.5892 1.66663 12.117 2.6134 13.1725 4.50694L13.4456 4.99682C13.7455 5.53491 13.8955 5.80395 14.1293 5.98147C14.3632 6.15898 14.6544 6.22488 15.2369 6.35667L15.7672 6.47665C17.8169 6.94042 18.8418 7.17231 19.0856 7.9564C19.3294 8.7405 18.6308 9.55752 17.2334 11.1916L16.8719 11.6143C16.4748 12.0787 16.2762 12.3108 16.1869 12.5981C16.0976 12.8853 16.1276 13.1951 16.1876 13.8146L16.2423 14.3786C16.4536 16.5588 16.5592 17.6489 15.9208 18.1335C15.2825 18.6181 14.3229 18.1762 12.4037 17.2926L11.9072 17.064C11.3619 16.8129 11.0892 16.6873 10.8001 16.6873C10.5111 16.6873 10.2384 16.8129 9.69304 17.064L9.19653 17.2926C7.27736 18.1762 6.31778 18.6181 5.67942 18.1335C5.04106 17.6489 5.1467 16.5588 5.35796 14.3786L5.41262 13.8146C5.47265 13.1951 5.50267 12.8853 5.41335 12.5981C5.32403 12.3108 5.12549 12.0787 4.7284 11.6143L4.36688 11.1916C2.9695 9.55752 2.27082 8.7405 2.51465 7.9564C2.75848 7.17231 3.78334 6.94042 5.83308 6.47665L6.36337 6.35667C6.94584 6.22488 7.23707 6.15898 7.47092 5.98147C7.70476 5.80395 7.85473 5.53491 8.15469 4.99682L8.42777 4.50694Z" fill="#F4AA2A" stroke="#F4AA2A" stroke-width="1.5" />
+                                </svg>
+                                <div><strong>5</strong> (129,611 yükləmə)</div>
+                            </div>
+                            <div class="section__header">
+                                <div class="section__header__content">
+                                    <h1 class="section__header__title">Tətbiqi yüklə və sənədləri indi rəsmiləşdir.</h1>
+                                    <p class="section__header__desc">Notariat hərəkətləri mobil cihazınızda!</p>
+                                </div>
+                                <button class="mn-banner__cta mn-btn mn-btn--primary mn-btn--lg" data-toggle="modal" data-target="#modalDownload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M2.7998 16.9C2.7998 15.5906 2.7998 14.9359 3.09452 14.455C3.25944 14.1859 3.4857 13.9596 3.75481 13.7947C4.23575 13.5 4.89043 13.5 6.1998 13.5H7.2998C9.18542 13.5 10.1282 13.5 10.714 14.0858C11.2998 14.6716 11.2998 15.6144 11.2998 17.5V18.6C11.2998 19.9094 11.2998 20.5641 11.0051 21.045C10.8402 21.3141 10.6139 21.5404 10.3448 21.7053C9.86386 22 9.20918 22 7.8998 22C5.93575 22 4.95372 22 4.23231 21.5579C3.82864 21.3106 3.48925 20.9712 3.24188 20.5675C2.7998 19.8461 2.7998 18.8641 2.7998 16.9Z" stroke="white" stroke-width="1.5" />
+                                        <path d="M14.2998 5.4C14.2998 4.09063 14.2998 3.43594 14.5945 2.955C14.7594 2.68589 14.9857 2.45963 15.2548 2.29472C15.7357 2 16.3904 2 17.6998 2C19.6639 2 20.6459 2 21.3673 2.44208C21.771 2.68945 22.1104 3.02884 22.3577 3.4325C22.7998 4.15391 22.7998 5.13594 22.7998 7.1C22.7998 8.40937 22.7998 9.06406 22.5051 9.545C22.3402 9.81411 22.1139 10.0404 21.8448 10.2053C21.3639 10.5 20.7092 10.5 19.3998 10.5H18.2998C16.4142 10.5 15.4714 10.5 14.8856 9.91421C14.2998 9.32843 14.2998 8.38562 14.2998 6.5V5.4Z" stroke="white" stroke-width="1.5" />
+                                        <path d="M17.2998 6.25C17.2998 5.73459 17.2998 5.47689 17.4289 5.29493C17.4745 5.23072 17.5305 5.17466 17.5947 5.12911C17.7767 5 18.0344 5 18.5498 5C19.0652 5 19.3229 5 19.5049 5.12911C19.5691 5.17466 19.6251 5.23072 19.6707 5.29493C19.7998 5.47689 19.7998 5.73459 19.7998 6.25C19.7998 6.76541 19.7998 7.02311 19.6707 7.20507C19.6251 7.26928 19.5691 7.32534 19.5049 7.37089C19.3229 7.5 19.0652 7.5 18.5498 7.5C18.0344 7.5 17.7767 7.5 17.5947 7.37089C17.5305 7.32534 17.4745 7.26928 17.4289 7.20507C17.2998 7.02311 17.2998 6.76541 17.2998 6.25Z" fill="white" />
+                                        <path d="M13.5498 22C13.5498 22.4142 13.8856 22.75 14.2998 22.75C14.714 22.75 15.0498 22.4142 15.0498 22H13.5498ZM15.1887 13.8371L15.6053 14.4607L15.6053 14.4607L15.1887 13.8371ZM14.6369 14.3889L14.0133 13.9722L14.0133 13.9722L14.6369 14.3889ZM19.7998 12.75H17.7998V14.25H19.7998V12.75ZM13.5498 19V22H15.0498V19H13.5498ZM17.7998 12.75C17.1132 12.75 16.5418 12.7491 16.0808 12.796C15.6074 12.8441 15.168 12.9489 14.772 13.2135L15.6053 14.4607C15.7138 14.3882 15.8778 14.3244 16.2326 14.2883C16.6 14.2509 17.082 14.25 17.7998 14.25V12.75ZM15.0498 17C15.0498 16.2822 15.0507 15.8002 15.0881 15.4328C15.1242 15.078 15.188 14.914 15.2605 14.8055L14.0133 13.9722C13.7487 14.3682 13.644 14.8075 13.5958 15.281C13.5489 15.742 13.5498 16.3134 13.5498 17H15.0498ZM14.772 13.2135C14.4717 13.4141 14.2139 13.6719 14.0133 13.9722L15.2605 14.8055C15.3517 14.669 15.4689 14.5519 15.6053 14.4607L14.772 13.2135Z" fill="white" />
+                                        <path d="M23.5498 13.5C23.5498 13.0858 23.214 12.75 22.7998 12.75C22.3856 12.75 22.0498 13.0858 22.0498 13.5H23.5498ZM21.5652 21.8478L21.8522 22.5407L21.8522 22.5407L21.5652 21.8478ZM22.6476 20.7654L21.9547 20.4784L21.9547 20.4784L22.6476 20.7654ZM17.7998 22.75H19.7998V21.25H17.7998V22.75ZM23.5498 17V13.5H22.0498V17H23.5498ZM19.7998 22.75C20.2555 22.75 20.6348 22.7504 20.9452 22.7292C21.2623 22.7076 21.5618 22.661 21.8522 22.5407L21.2782 21.1548C21.201 21.1868 21.0838 21.2163 20.8431 21.2327C20.5956 21.2496 20.276 21.25 19.7998 21.25V22.75ZM22.0498 19C22.0498 19.4762 22.0494 19.7958 22.0325 20.0433C22.0161 20.284 21.9866 20.4012 21.9547 20.4784L23.3405 21.0524C23.4608 20.762 23.5074 20.4625 23.529 20.1454C23.5502 19.835 23.5498 19.4557 23.5498 19H22.0498ZM21.8522 22.5407C22.526 22.2616 23.0614 21.7262 23.3405 21.0524L21.9547 20.4784C21.8278 20.7846 21.5844 21.028 21.2782 21.1548L21.8522 22.5407Z" fill="white" />
+                                        <path d="M2.7998 7.1C2.7998 5.13594 2.7998 4.15391 3.24188 3.4325C3.48925 3.02884 3.82864 2.68945 4.23231 2.44208C4.95372 2 5.93575 2 7.89981 2C9.20918 2 9.86386 2 10.3448 2.29472C10.6139 2.45963 10.8402 2.68589 11.0051 2.955C11.2998 3.43594 11.2998 4.09063 11.2998 5.4V6.5C11.2998 8.38562 11.2998 9.32843 10.714 9.91421C10.1282 10.5 9.18542 10.5 7.2998 10.5H6.19981C4.89043 10.5 4.23575 10.5 3.75481 10.2053C3.4857 10.0404 3.25944 9.81411 3.09452 9.545C2.7998 9.06406 2.7998 8.40937 2.7998 7.1Z" stroke="white" stroke-width="1.5" />
+                                        <path d="M5.7998 6.25C5.7998 5.73459 5.7998 5.47689 5.92891 5.29493C5.97447 5.23072 6.03053 5.17466 6.09473 5.12911C6.27669 5 6.5344 5 7.0498 5C7.56521 5 7.82291 5 8.00487 5.12911C8.06908 5.17466 8.12514 5.23072 8.1707 5.29493C8.2998 5.47689 8.2998 5.73459 8.2998 6.25C8.2998 6.76541 8.2998 7.02311 8.1707 7.20507C8.12514 7.26928 8.06908 7.32534 8.00487 7.37089C7.82291 7.5 7.56521 7.5 7.0498 7.5C6.5344 7.5 6.27669 7.5 6.09473 7.37089C6.03053 7.32534 5.97447 7.26928 5.92891 7.20507C5.7998 7.02311 5.7998 6.76541 5.7998 6.25Z" fill="white" />
+                                        <path d="M5.7998 17.75C5.7998 17.2346 5.7998 16.9769 5.92891 16.7949C5.97447 16.7307 6.03053 16.6747 6.09473 16.6291C6.27669 16.5 6.5344 16.5 7.0498 16.5C7.56521 16.5 7.82291 16.5 8.00487 16.6291C8.06908 16.6747 8.12514 16.7307 8.1707 16.7949C8.2998 16.9769 8.2998 17.2346 8.2998 17.75C8.2998 18.2654 8.2998 18.5231 8.1707 18.7051C8.12514 18.7693 8.06908 18.8253 8.00487 18.8709C7.82291 19 7.56521 19 7.0498 19C6.5344 19 6.27669 19 6.09473 18.8709C6.03053 18.8253 5.97447 18.7693 5.92891 18.7051C5.7998 18.5231 5.7998 18.2654 5.7998 17.75Z" fill="white" />
+                                        <path d="M16.7998 17.75C16.7998 17.0478 16.7998 16.6967 16.9683 16.4444C17.0413 16.3352 17.135 16.2415 17.2442 16.1685C17.4965 16 17.8476 16 18.5498 16C19.252 16 19.6032 16 19.8554 16.1685C19.9646 16.2415 20.0583 16.3352 20.1313 16.4444C20.2998 16.6967 20.2998 17.0478 20.2998 17.75C20.2998 18.4522 20.2998 18.8033 20.1313 19.0556C20.0583 19.1648 19.9646 19.2585 19.8554 19.3315C19.6032 19.5 19.252 19.5 18.5498 19.5C17.8476 19.5 17.4965 19.5 17.2442 19.3315C17.135 19.2585 17.0413 19.1648 16.9683 19.0556C16.7998 18.8033 16.7998 18.4522 16.7998 17.75Z" fill="white" />
+                                    </svg>
+                                    <span>İndi yüklə</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Download Now -->
+        <!-- Blogs -->
+        <section class="section section--blogs">
+            <div class="container">
+                <div class="section__content">
+                    <div class="section__header section__header--row">
+                        <div class="section__header__content">
+                            <h1 class="section__header__title">Faydalı resurslardan yararlanın<span class="mn-dot">.</span> </h1>
+                            <p class="section__header__desc">Notariat hərəkətləri haqqında bilməli olduğunuz bütün məlumatlar:</p>
+                        </div>
+                        <a class="mn-btn mn-btn--lg" href="blogs.html">
+                            <span>Daha çoxuna bax</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="section__body">
+                        <div class="mn-blogs mn-blogs--top">
+                            <div class="swiper swiper--top-blogs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="mn-top-blogs__item">
+                                            <img class="mn-top-blogs__item__thumb" src="https://picsum.photos/600" alt="Blog 1">
+                                            <h3 class="mn-top-blogs__item__title">Hac aliquet proin gravida hac in.</h3>
+                                            <div class="mn-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="mn-top-blogs__item">
+                                            <img class="mn-top-blogs__item__thumb" src="https://picsum.photos/650" alt="Blog 1">
+                                            <h3 class="mn-top-blogs__item__title">Hac aliquet proin gravida hac in 2.</h3>
+                                            <div class="mn-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="mn-top-blogs__item">
+                                            <img class="mn-top-blogs__item__thumb" src="https://picsum.photos/700" alt="Blog 1">
+                                            <h3 class="mn-top-blogs__item__title">Hac aliquet proin gravida hac in 3.</h3>
+                                            <div class="mn-overlay"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mn-swiper__overlay">
+                                    <a class="mn-btn mn-btn--primary mn-btn--lg" href="blogs.html">
+                                        <span>Ətraflı oxu</span>
+                                    </a>
+                                    <div class="mn-swiper__nav">
+                                        <div class="mn-swiper__btn mn-swiper__btn--prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+                                                <path d="M1.91797 6.22843L14.418 6.22843" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.95898 11.2488L1.91732 6.22884L6.95898 1.20801" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="mn-swiper__pagination"></div>
+                                        <div class="mn-swiper__btn mn-swiper__btn--next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none">
+                                                <path d="M13.834 6.22843L1.33398 6.22843" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8.79297 11.2488L13.8346 6.22884L8.79297 1.20801" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mn-blogs__wrapper">
+                                <a href="blog.html" class="mn-blogs__item">
+                                    <div class="mn-blogs__item__thumb">
+                                        <img src="https://picsum.photos/300" alt="Blog 1">
+                                    </div>
+                                    <div class="mn-blogs__item__body">
+                                        <h3 class="mn-blogs__item__title">Sagittis risus ut accumsan pulvinar egestas egestas.</h3>
+                                        <span class="mn-blogs__item__cta mn-btn mn-btn--text">
+                                            <span>Ətraflı oxu</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            </>
+                                    </div>
+                                </a>
+                                <a href="blog.html" class="mn-blogs__item">
+                                    <div class="mn-blogs__item__thumb">
+                                        <img src="https://picsum.photos/200" alt="Blog 1">
+                                    </div>
+                                    <div class="mn-blogs__item__body">
+                                        <h3 class="mn-blogs__item__title">Sagittis risus ut accumsan pulvinar egestas egestas.</h3>
+                                        <span class="mn-blogs__item__cta mn-btn mn-btn--text">
+                                            <span>Ətraflı oxu</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            </>
+                                    </div>
+                                </a>
+                                <a href="blog.html" class="mn-blogs__item">
+                                    <div class="mn-blogs__item__thumb">
+                                        <img src="https://picsum.photos/400" alt="Blog 1">
+                                    </div>
+                                    <div class="mn-blogs__item__body">
+                                        <h3 class="mn-blogs__item__title">Sagittis risus ut accumsan pulvinar egestas egestas.</h3>
+                                        <span class="mn-blogs__item__cta mn-btn mn-btn--text">
+                                            <span>Ətraflı oxu</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            </>
+                                    </div>
+                                </a>
+                                <a href="blog.html" class="mn-blogs__item">
+                                    <div class="mn-blogs__item__thumb">
+                                        <img src="https://picsum.photos/500" alt="Blog 1">
+                                    </div>
+                                    <div class="mn-blogs__item__body">
+                                        <h3 class="mn-blogs__item__title">Sagittis risus ut accumsan pulvinar egestas egestas.</h3>
+                                        <span class="mn-blogs__item__cta mn-btn mn-btn--text">
+                                            <span>Ətraflı oxu</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            </>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="mn-pattern mn-pattern--4" src="./assets/images/patterns/vector-4.svg" alt="Mobil Notariat">
+        </section>
+        <!-- Blogs -->
+        <!-- FAQ -->
+        <section class="section section--faq">
+            <div class="container">
+                <div class="section__content">
+                    <div class="section__header section__header--row">
+                        <div class="section__header__content">
+                            <h1 class="section__header__title">Tez-tez verilən suallar<span class="mn-dot">.</span> </h1>
+                            <p class="section__header__desc">Tətbiqin necə istifadə ediləcəyinə dair addım-addım rəhbər tifadə ediləcəyinə dair:</p>
+                        </div>
+                        <a class="mn-btn mn-btn--lg" href="faq.html">
+                            <span>Daha çoxuna bax</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="section__body">
+                        <div class="mn-accordion">
+                            <div class="mn-accordion__item mn-accordion__item--show">
+                                <div class="mn-accordion__item__header">
+                                    <span class="mn-accordion__item__header__number">1</span>
+                                    <div class="mn-accordion__item__header__title">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər?</div>
+                                    <span class="mn-accordion__item__header__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                            <path d="M13.7998 7.99956L1.7998 7.99956" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.79909 14L7.7991 2" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mn-accordion__item__body">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər? Bu xidmətlərdən Azərbaycan Respublikası vətəndaşları, o cümlədən ölkə xaricində olanlar, eləcə də Azərbaycan Respublikası ərazisində müvəqqəti və ya daimi yaşayış üçün icazəsi olan əcnəbilər və vətəndaşlığı olmayan şəxslər istifadə edə bilərlər. </div>
+                            </div>
+                            <div class="mn-accordion__item">
+                                <div class="mn-accordion__item__header">
+                                    <span class="mn-accordion__item__header__number">2</span>
+                                    <div class="mn-accordion__item__header__title">"Mobil Notariat” veb-saytında verilən etibarnamə kağız daşıyıcıya keçirilərək notarius tərəfindən təsdiq edilməlidirmi?</div>
+                                    <span class="mn-accordion__item__header__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                            <path d="M13.7998 7.99956L1.7998 7.99956" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.79909 14L7.7991 2" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mn-accordion__item__body">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər? Bu xidmətlərdən Azərbaycan Respublikası vətəndaşları, o cümlədən ölkə xaricində olanlar, eləcə də Azərbaycan Respublikası ərazisində müvəqqəti və ya daimi yaşayış üçün icazəsi olan əcnəbilər və vətəndaşlığı olmayan şəxslər istifadə edə bilərlər. </div>
+                            </div>
+                            <div class="mn-accordion__item">
+                                <div class="mn-accordion__item__header">
+                                    <span class="mn-accordion__item__header__number">3</span>
+                                    <div class="mn-accordion__item__header__title">Veb-sayt  vasitəsi ilə verilmiş etibarnaməni ləğv etmək olarmı?</div>
+                                    <span class="mn-accordion__item__header__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                            <path d="M13.7998 7.99956L1.7998 7.99956" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.79909 14L7.7991 2" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mn-accordion__item__body">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər? Bu xidmətlərdən Azərbaycan Respublikası vətəndaşları, o cümlədən ölkə xaricində olanlar, eləcə də Azərbaycan Respublikası ərazisində müvəqqəti və ya daimi yaşayış üçün icazəsi olan əcnəbilər və vətəndaşlığı olmayan şəxslər istifadə edə bilərlər. </div>
+                            </div>
+                            <div class="mn-accordion__item">
+                                <div class="mn-accordion__item__header">
+                                    <span class="mn-accordion__item__header__number">4</span>
+                                    <div class="mn-accordion__item__header__title">Yaxın qohuma verilən etibarnamələr üçün ödəniş zamanı güzəştlər tətbiq edilirmi?</div>
+                                    <span class="mn-accordion__item__header__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                            <path d="M13.7998 7.99956L1.7998 7.99956" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.79909 14L7.7991 2" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mn-accordion__item__body">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər? Bu xidmətlərdən Azərbaycan Respublikası vətəndaşları, o cümlədən ölkə xaricində olanlar, eləcə də Azərbaycan Respublikası ərazisində müvəqqəti və ya daimi yaşayış üçün icazəsi olan əcnəbilər və vətəndaşlığı olmayan şəxslər istifadə edə bilərlər. </div>
+                            </div>
+                            <div class="mn-accordion__item">
+                                <div class="mn-accordion__item__header">
+                                    <span class="mn-accordion__item__header__number">5</span>
+                                    <div class="mn-accordion__item__header__title">Əcnəbilərə nəqliyyat vasitəsindən istifadə edilməsinə dair etibarnamə verilə bilərmi?</div>
+                                    <span class="mn-accordion__item__header__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                            <path d="M13.7998 7.99956L1.7998 7.99956" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.79909 14L7.7991 2" stroke="#7187CC" stroke-width="2.41025" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mn-accordion__item__body">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər? Bu xidmətlərdən Azərbaycan Respublikası vətəndaşları, o cümlədən ölkə xaricində olanlar, eləcə də Azərbaycan Respublikası ərazisində müvəqqəti və ya daimi yaşayış üçün icazəsi olan əcnəbilər və vətəndaşlığı olmayan şəxslər istifadə edə bilərlər. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- FAQ -->
+    </main>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__body footer__body--primary">
+                    <div class="footer__logo">
+                        <a href="index.html">
+                            <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+                        </a>
+                        <p>Notariat hərəkətlərin elektron qaydada aparılması və sənədlərin 24/7 rejimdə rəsmiləşdirilməsi.</p>
+                    </div>
+                    <div class="footer__block">
+                        <div class="footer__block__item">
+                            <span class="footer__block__item__title">Əməliyyatlar</span>
+                            <ul class="footer__block__item__list">
+                                <li>
+                                    <a href="#">FİN və barkod ilə sənəd yoxlama</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vərəsəlik işlərinin yoxlanılması</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__block__item">
+                            <span class="footer__block__item__title">Məlumat</span>
+                            <ul class="footer__block__item__list">
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Notariat hərəkətləri haqqında</a>
+                                </li>
+                                <li>
+                                    <a href="#">Notariusların siyahısı</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__block__item">
+                            <span class="footer__block__item__title">Əlaqə</span>
+                            <ul class="footer__block__item__list">
+                                <li>
+                                    <span>Qaynar xətt - </span>
+                                    <a href="tel:880">880</a>
+                                </li>
+                                <li>
+                                    <span>E-poçt - </span>
+                                    <a href="mailto:enotary@justice.gov.az">enotary@justice.gov.az</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__body footer__body--secondary">
+                    <div class="mn-copyright"> All rights reserver | Sənədlərin elektron rəsmiləşdi | 2024 </div>
+                    <ul class="mn-social-list">
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/facebook-messenger.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/whatsapp.svg" alt="whatsapp">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/x.svg" alt="x">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/icon/tiktok.svg" alt="tiktok">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <!-- Main  -->
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js" integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
