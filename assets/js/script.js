@@ -342,7 +342,8 @@
     }
 
     // Copy url to share
-    document.querySelector('.mn-share__list__item__link--copy').addEventListener('click', () => {
+    const copyShareUrl = document.querySelector('.mn-share__list__item__link--copy')
+    copyShareUrl && copyShareUrl.addEventListener('click', () => {
         const url = window.location.href;
         navigator.clipboard.writeText(url)
             .then(() => showToast('URL kopyalandı!', 'success'))
