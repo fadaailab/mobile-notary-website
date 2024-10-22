@@ -170,32 +170,22 @@
             equalheight: true
         },
         filter: function () {
-            if (qsRegex) {
-                let searchResult = qsRegex ? this.textContent.match(qsRegex) : true
-                let buttonResult = buttonFilter ? this.matches(buttonFilter) : true;
-                return searchResult && buttonResult
-            } else
-                return true
-        }
-    });
-
-    let filterFns = {
-        search: function () {
             let searchResult = qsRegex ? this.textContent.match(qsRegex) : true
             let buttonResult = buttonFilter ? this.matches(buttonFilter) : true;
             return searchResult && buttonResult
         }
-    };
+    });
 
     let filterTabs = Array.from(document.querySelectorAll('.mn-tabs__item'))
     filterTabs && filterTabs.forEach(filterTab => {
         filterTab.addEventListener('click', () => {
             if (!filterTab.classList.contains('mn-tabs__item--active')) {
-                document.querySelector('.mn-tabs__item').classList.remove('.mn-tabs__item--active')
-                filterTab.classList.add('.mn-tabs__item--active')
+                document.querySelector('.mn-tabs__item--active').classList.remove('mn-tabs__item--active')
+                filterTab.classList.add('mn-tabs__item--active')
                 let filterGroup = filterTab.closest('.mn-tabs').getAttribute('data-filter-group')
                 buttonFilters[filterGroup] = filterTab.getAttribute('data-filter')
                 buttonFilter = concatValues(buttonFilters);
+
                 iso.arrange()
             }
         });
@@ -205,20 +195,6 @@
         let value = ''; for (let prop in obj) { value += obj[prop]; }
         return value;
     }
-
-    // const filterTabs = document.querySelectorAll('.mn-tabs__item')
-
-    // filterTabs && filterTabs.forEach(filterTab => {
-    //     filterTab.addEventListener('click', () => {
-    //         const dataFilter = filterTab.dataset.filter
-    //         const activeTab = document.querySelectorAll('.mn-tabs__item--active')
-    //         activeTab && activeTab.forEach(activeTag => {
-    //             activeTag.classList.remove('mn-tabs__item--active')
-    //         })
-    //         filterTab.classList.add('mn-tabs__item--selected')
-    //         iso.arrange({ filter: dataFilter });
-    //     });
-    // });
 
     // Debounce function using modern syntax
     function debounce(fn, delay = 100) {
@@ -363,6 +339,24 @@
     if (activeAccordionItem) {
         const activeBody = activeAccordionItem.querySelector('.mn-accordion__item__body');
         slideDown(activeBody, 250);
+    }
+
+    // Copy url to share
+    document.querySelector('.mn-share__list__item__link--copy').addEventListener('click', () => {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url)
+            .then(() => showToast('URL kopyalandı!', 'success'))
+            .catch(() => showToast('URL kopyalanmadı!', 'error'));
+    })
+
+    function showToast(message, type) {
+        const toast = document.querySelector('.mn-toaster');
+        toast.textContent = message;
+        toast.className = `mn-toaster show ${type}`;
+
+        setTimeout(() => {
+            toast.className = 'mn-toaster';
+        }, 2500);
     }
 
     function slideUp(target, duration = 500) {

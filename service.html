@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-    <!-- Toaster -->
-    <div class="mn-toaster"></div>
     <!-- Preloader -->
     <div class="mn-preloader">
         <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
@@ -44,13 +42,13 @@
                                 <a href="about.html">Haqqımızda</a>
                             </li>
                             <li>
-                                <a href="services.html">Xidmətlər</a>
+                                <a href="services.html" class="active">Xidmətlər</a>
                             </li>
                             <li>
                                 <a href="faq.html">FAQ</a>
                             </li>
                             <li>
-                                <a class="active" href="blogs.html">Bloq</a>
+                                <a href="blogs.html">Bloq</a>
                             </li>
                             <li>
                                 <a href="contact.html">Əlaqə</a>
@@ -71,28 +69,44 @@
             </div>
         </div>
     </header>
-    <main class="main main--blog">
-        <section class="section section--blog">
+    <main class="main main--service">
+        <section class="section section--service">
             <div class="container">
                 <div class="section__content">
-                    <div class="section__header section__header--center">
+                    <div class="section__header section__header--row">
                         <div class="section__header__content">
                             <div class="mn-breadcrumbs">
                                 <a href="index.html" class="mn-breadcrumbs__item">Ana səhifə</a>
                                 <span class="mn-breadcrumbs__delimiter"> / </span>
-                                <a href="index.html" class="mn-breadcrumbs__item">Bloq</a>
+                                <a href="index.html" class="mn-breadcrumbs__item">Xidmətlər</a>
                                 <span class="mn-breadcrumbs__delimiter"> / </span>
-                                <span class="mn-breadcrumbs__item mn-breadcrumbs__item--current">Etibarnamələr necə yaradılır?</span>
+                                <span class="mn-breadcrumbs__item mn-breadcrumbs__item--current">Nəqliyyatdan istifadə etibarnaməsi</span>
                             </div>
-                            <h1 class="section__header__title">Etibarnamələr necə yaradılır?<span class="mn-dot">.</span> </h1>
+                            <h1 class="section__header__title">
+                                <div class="mn-services__card__icon green">
+                                    <img src="./assets/icon/attorney.svg" alt="Etibarnamə">
+                                </div> Nəqliyyatdan istifadə etibarnaməsi<span class="mn-dot">.</span>
+                            </h1>
                         </div>
+                        <a class="mn-btn mn-btn--lg" href="#">
+                            <span>Etibarnamə yarat</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
                     </div>
                     <div class="section__body">
-                        <div class="mn-blog">
-                            <div class="mn-blog__picture">
+                        <div class="mn-service">
+                            <div class="mn-service__picture">
                                 <img src="https://picsum.photos/1200/315" alt="blog image">
+                                <div class="mn-overlay">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="133" height="132" viewBox="0 0 133 132" fill="none">
+                                        <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M66.8999 12.375C37.3372 12.375 13.2844 36.432 13.2844 66C13.2844 95.568 37.3372 119.625 66.8999 119.625C96.4627 119.625 120.515 95.568 120.515 66C120.515 36.432 96.4627 12.375 66.8999 12.375Z" fill="white" />
+                                        <path d="M55.9175 52.8189V79.1243C55.9175 81.4904 58.5286 82.9252 60.5259 81.6567L81.2346 68.504C83.09 67.3256 83.09 64.6177 81.2346 63.4392L60.5259 50.2865C58.5286 49.018 55.9175 50.4529 55.9175 52.8189Z" fill="white" />
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="mn-blog__content mn-content">
+                            <div class="mn-service__content mn-content">
                                 <div class="mn-content__body">
                                     <h5>Lorem ipsum dolor sit amet consectetur.</h5>
                                     <p>Arcu dictumst ac imperdiet egestas scelerisque dui vitae turpis purus. Dui dui vel ultricies augue consectetur dignissim lectus senectus at. Placerat nulla pretium commodo lobortis nunc. Aliquam etiam pretium dictum mi arcu et a bibendum magna. Nec ac sed donec egestas nunc. Nisl vel lectus velit eu ac. Vestibulum justo faucibus arcu sodales cras placerat sagittis. Eros ut justo ullamcorper risus. Lectus feugiat ipsum neque viverra eget bibendum. Nisl et ipsum aenean pellentesque. Nunc quam urna mauris scelerisque malesuada aenean. Turpis sed pretium sit magna. Nulla feugiat est nisl purus eros. Sagittis tempor accumsan id vitae ut. Facilisis tortor sed lacus est gravida</p>
@@ -102,45 +116,46 @@
                                     <p>Arcu dictumst ac imperdiet egestas scelerisque dui vitae turpis purus. Dui dui vel ultricies augue consectetur dignissim lectus senectus at. Placerat nulla pretium commodo lobortis nunc. Aliquam etiam pretium dictum mi arcu et a bibendum magna. Nec ac sed donec egestas nunc. Nisl vel lectus velit eu ac. Vestibulum justo faucibus arcu sodales cras placerat sagittis. Eros ut justo ullamcorper risus. Lectus feugiat ipsum neque viverra eget bibendum. Nisl et ipsum aenean pellentesque. Nunc quam urna mauris scelerisque malesuada aenean. Turpis sed pretium sit magna. Nulla feugiat est nisl purus eros. Sagittis tempor accumsan id vitae ut. Facilisis tortor sed lacus est gravida</p>
                                 </div>
                                 <div class="mn-content__footer">
-                                    <div class="mn-share">
-                                        <span class="mn-share__title"> Paylaş: </span>
-                                        <ul class="mn-share__list">
-                                            <li class="mn-share__list__item">
-                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourblogurl.com" class="mn-share__list__item__link" target="_blank" rel="noopener noreferrer">
-                                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M24.7998 2.66663H20.7998C19.0317 2.66663 17.336 3.369 16.0858 4.61925C14.8356 5.86949 14.1332 7.56518 14.1332 9.33329V13.3333H10.1332V18.6666H14.1332V29.3333H19.4665V18.6666H23.4665L24.7998 13.3333H19.4665V9.33329C19.4665 8.97967 19.607 8.64053 19.857 8.39048C20.1071 8.14044 20.4462 7.99996 20.7998 7.99996H24.7998V2.66663Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li class="mn-share__list__item">
-                                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourblogurl.com" class="mn-share__list__item__link" target="_blank" rel="noopener noreferrer">
-                                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M22.1331 10.6666C24.2548 10.6666 26.2897 11.5095 27.79 13.0098C29.2902 14.5101 30.1331 16.5449 30.1331 18.6666V28H24.7998V18.6666C24.7998 17.9594 24.5188 17.2811 24.0187 16.781C23.5186 16.2809 22.8403 16 22.1331 16C21.4259 16 20.7476 16.2809 20.2475 16.781C19.7474 17.2811 19.4664 17.9594 19.4664 18.6666V28H14.1331V18.6666C14.1331 16.5449 14.976 14.5101 16.4762 13.0098C17.9765 11.5095 20.0114 10.6666 22.1331 10.6666Z" stroke="#121F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M8.79976 12H3.46643V28H8.79976V12Z" stroke="#121F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.1331 7.99996C7.60586 7.99996 8.79976 6.80605 8.79976 5.33329C8.79976 3.86053 7.60586 2.66663 6.1331 2.66663C4.66034 2.66663 3.46643 3.86053 3.46643 5.33329C3.46643 6.80605 4.66034 7.99996 6.1331 7.99996Z" stroke="#121F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li class="mn-share__list__item">
-                                                <span class="mn-share__list__item__link mn-share__list__item__link--copy" target="_blank" rel="noopener noreferrer">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#1C274C" stroke-width="1.5" />
-                                                        <path d="M14 6.5L9 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M14 17.5L9 14" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#1C274C" stroke-width="1.5" />
-                                                        <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#1C274C" stroke-width="1.5" />
-                                                    </svg>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <ul class="mn-share__list">
+                                        <li class="mn-share__list__item">
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourblogurl.com" class="mn-share__list__item__link" target="_blank" rel="noopener noreferrer">
+                                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24.7998 2.66663H20.7998C19.0317 2.66663 17.336 3.369 16.0858 4.61925C14.8356 5.86949 14.1332 7.56518 14.1332 9.33329V13.3333H10.1332V18.6666H14.1332V29.3333H19.4665V18.6666H23.4665L24.7998 13.3333H19.4665V9.33329C19.4665 8.97967 19.607 8.64053 19.857 8.39048C20.1071 8.14044 20.4462 7.99996 20.7998 7.99996H24.7998V2.66663Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="mn-share__list__item">
+                                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourblogurl.com" class="mn-share__list__item__link" target="_blank" rel="noopener noreferrer">
+                                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22.1331 10.6666C24.2548 10.6666 26.2897 11.5095 27.79 13.0098C29.2902 14.5101 30.1331 16.5449 30.1331 18.6666V28H24.7998V18.6666C24.7998 17.9594 24.5188 17.2811 24.0187 16.781C23.5186 16.2809 22.8403 16 22.1331 16C21.4259 16 20.7476 16.2809 20.2475 16.781C19.7474 17.2811 19.4664 17.9594 19.4664 18.6666V28H14.1331V18.6666C14.1331 16.5449 14.976 14.5101 16.4762 13.0098C17.9765 11.5095 20.0114 10.6666 22.1331 10.6666Z" stroke="#121F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M8.79976 12H3.46643V28H8.79976V12Z" stroke="#121F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M6.1331 7.99996C7.60586 7.99996 8.79976 6.80605 8.79976 5.33329C8.79976 3.86053 7.60586 2.66663 6.1331 2.66663C4.66034 2.66663 3.46643 3.86053 3.46643 5.33329C3.46643 6.80605 4.66034 7.99996 6.1331 7.99996Z" stroke="#121F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="mn-share__list__item">
+                                            <span class="mn-share__list__item__link mn-share__list__item__link--copy" target="_blank" rel="noopener noreferrer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#1C274C" stroke-width="1.5" />
+                                                    <path d="M14 6.5L9 10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                                                    <path d="M14 17.5L9 14" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                                                    <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#1C274C" stroke-width="1.5" />
+                                                    <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#1C274C" stroke-width="1.5" />
+                                                </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a class="mn-btn mn-btn--primary mn-btn--green mn-btn--lg" href="#">
+                                        <span>Etibarnamə yarat</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <img class="mn-pattern mn-pattern--1" src="./assets/images/patterns/vector-1.svg" alt="Mobil Notariat">
         </section>
     </main>
     <!-- Footer -->
