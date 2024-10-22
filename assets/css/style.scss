@@ -738,6 +738,7 @@ body {
   background: var(--base-1);
   z-index: 999;
   transition: var(--ts-slow);
+  display: none;
 
   img,
   svg {

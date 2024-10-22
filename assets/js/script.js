@@ -1,13 +1,13 @@
 (function () {
     // Hide the preloader once the page is fully loaded
     window.addEventListener("load", () => {
-        const preloader = document.querySelector(".mn-preloader");
-        preloader.classList.add("hide");
+        // const preloader = document.querySelector(".mn-preloader");
+        // preloader.classList.add("hide");
 
-        // Ensure preloader is fully hidden after the animation
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 500);
+        // // Ensure preloader is fully hidden after the animation
+        // setTimeout(() => {
+        //     preloader.style.display = "none";
+        // }, 500);
 
         // Start the typing effect
         const dynamicText = document.querySelector(".mn-stats__header span");
