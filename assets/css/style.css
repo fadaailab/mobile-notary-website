@@ -788,7 +788,7 @@ body {
   border: 0;
   background: none;
   gap: 10px;
-  color: var(--blue-500);
+  color: var(--blue-700);
   font-size: var(--fs-b2);
   line-height: var(--lh-b2);
   font-weight: var(--fw-bold);
@@ -801,17 +801,17 @@ body {
      object-fit: contain;
 }
 .mn-btn--text svg path {
-  stroke: var(--blue-500);
+  stroke: var(--blue-700);
 }
 .mn-btn--text:hover {
   background: none;
-  color: var(--blue-700);
+  color: var(--blue-500);
 }
 .mn-btn--text:hover svg {
   transform: translateX(10px);
 }
 .mn-btn--text:hover svg path {
-  stroke: var(--blue-700);
+  stroke: var(--blue-500);
 }
 .mn-btn--sm {
   padding: 8px 16px;
@@ -1407,8 +1407,14 @@ body {
 .mn-blogs__item:hover .mn-blogs__item__body {
   transform: translateX(8px);
 }
+.mn-blogs__item:hover .mn-blogs__item__cta {
+  color: var(--blue-500);
+}
 .mn-blogs__item:hover .mn-blogs__item__cta svg {
   transform: translateX(10px);
+}
+.mn-blogs__item:hover .mn-blogs__item__cta svg path {
+  stroke: var(--blue-500);
 }
 .mn-blogs__item__thumb {
   width: 112px;
