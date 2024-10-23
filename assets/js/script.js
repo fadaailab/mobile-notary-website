@@ -1,5 +1,4 @@
 (function () {
-    // Hide the preloader once the page is fully loaded
     window.addEventListener("load", () => {
         // const preloader = document.querySelector(".mn-preloader");
         // preloader.classList.add("hide");
@@ -148,9 +147,10 @@
             prevEl: ".mn-swiper__btn--prev",
         },
         loop: true,
-        autoplay: {
-            delay: 2500,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        // },
+        pauseOnMouseEnter: true,
         speed: 500,
     });
 
