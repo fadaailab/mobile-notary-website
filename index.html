@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mobil Notariat">
-    <title>Mobil Notariat</title>
+    <meta name="keywords" content="notarius, rəqəmsal notarius, elektron sənəd, mobil notarius xidməti, notarius tətbiqi, onlayn notarius, sənəd təsdiqləmə, online etibarname, elektron notariat,  mobil notariat qeydiyyat, elektron etibarname, notarius 24 saat">
+    <meta name="description" content="Mobil Notariat elektron sənədləşməni mobil tətbiq və veb-sayt vasitəsilə 24/7, həftə sonları və bayram günləri daxil olmaqla təklif edir.">
+    <title>Mobil Notariat - Sənədlərin elektron qaydada rəsmiləşdirilməsi</title>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -50,6 +51,22 @@
             </div>
         </div>
     </div>
+    <div class="mn-modal mn-modal--fade mn-modal--transparent mn-modal--lg mn-modal--how-it-works" id="modalHowItWorks">
+        <div class="mn-modal__dialog">
+            <div class="mn-modal__content mn-modal__content--phone">
+                <button class="mn-modal__close" data-close="modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <rect width="30" height="30" rx="15" fill="#F0F0F0" />
+                        <path d="M19.492 9.375L15 13.867L10.508 9.375L9.375 10.508L13.867 15L9.375 19.492L10.508 20.625L15 16.133L19.492 20.625L20.625 19.492L16.133 15L20.625 10.508L19.492 9.375Z" fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5084 8.78574L15.0004 13.2777L19.4924 8.78574L21.2146 10.508L16.7227 15L21.2146 19.492L19.4924 21.2142L15.0004 16.7223L10.5084 21.2142L8.78613 19.492L13.2781 15L8.78613 10.508L10.5084 8.78574ZM9.96464 10.508L14.4566 15L9.96464 19.492L10.5084 20.0357L15.0004 15.5438L19.4924 20.0357L20.0361 19.492L15.5442 15L20.0361 10.508L19.4924 9.96425L15.0004 14.4562L10.5084 9.96425L9.96464 10.508Z" fill="black" />
+                    </svg>
+                </button>
+                <div class="mn-modal__body">
+                    <video src="#" class="mn-how-it-works__video" width="852" height="468" autoplay controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modals -->
     <!-- Preloader -->
     <div class="mn-preloader">
@@ -63,37 +80,72 @@
                 <div class="header__content__group">
                     <div class="header__content__group__item">
                         <a href="index.html" class="header__logo">
-                            <img class="d-mobile-none" src="./assets/images/logo-dark.svg" alt="Mobil Notariat" width="112" height="44">
+                            <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat" width="112" height="44">
                         </a>
                     </div>
                 </div>
-                <div class="header__content__group grow">
+                <div class="header__content__group grow ">
                     <div class="header__content__group__item">
-                        <ul class="header__menu-list">
-                            <li>
-                                <a href="about.html">Haqqımızda</a>
-                            </li>
-                            <li>
-                                <a href="services.html">Xidmətlər</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="blogs.html">Bloq</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Əlaqə</a>
-                            </li>
-                        </ul>
+                        <div class="header__menu">
+                            <div class="header__menu__title d-lg-flex d-none">
+                                <span>Menu</span>
+                                <button class="mn-btn mn-btn--icon mn-btn--secondary mn-btn--menu-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="header__menu__body">
+                                <ul class="header__menu__list">
+                                    <li>
+                                        <a href="about.html">Haqqımızda</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Xidmətlər</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="blogs.html">Bloq</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Əlaqə</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__menu__footer d-lg-flex d-none">
+                                <button class="mn-btn mn-btn--primary mn-btn--lg">
+                                    <span>Hesabınıza daxil olun</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M4.2998 12H20.2998M20.2998 12L14.2998 6M20.2998 12L14.2998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="header__content__group">
-                    <div class="header__content__group__item d-mobile-flex">
+                    <div class="header__content__group__item d-lg-none">
                         <button class="mn-btn mn-btn--primary">
                             <span>Daxil ol</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M4.2998 12H20.2998M20.2998 12L14.2998 6M20.2998 12L14.2998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header__content__group__item d-lg-flex d-none">
+                        <a href="#" class="mn-btn  mn-btn--icon mn-btn--secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M4 12H14M14 12L11 9M14 12L11 15" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <button class="mn-btn  mn-btn--icon mn-btn--secondary mn-btn--menu-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 7L4 7" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M20 12L4 12" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M20 17L4 17" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
                             </svg>
                         </button>
                     </div>
@@ -107,7 +159,7 @@
         <!--  Welcome  -->
         <section class="section section--welcome">
             <div class="container">
-                <div class="section__content section__content--row">
+                <div class="section__content section__content--row section__content--center">
                     <div class="section__header">
                         <div class="section__header__content">
                             <h1 class="section__header__title"> Etibarnamə və ərizələrin <span class="mn-highlight">elektron</span> rəsmiləşdirilməsi </h1>
@@ -156,7 +208,7 @@
                     </div>
                 </div>
             </div>
-            <img class="mn-pattern mn-pattern--1" src="./assets/images/patterns/vector-1.svg" alt="Mobil Notariat">
+            <img class="mn-pattern mn-pattern--1" src="./assets/images/patterns/vector-1-1.svg" alt="Mobil Notariat">
         </section>
         <!--  Welcome  -->
         <!--  How it Works -->
@@ -176,7 +228,7 @@
                             <div class="swiper swiper--how-it-works">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="#" class="mn-how-it-works__card blue">
+                                        <div class="mn-how-it-works__card blue" data-toggle="modal" data-target="#modalHowItWorks" data-src="https://www.w3schools.com/html/mov_bbb.mp4">
                                             <div class="mn-how-it-works__card__icon">
                                                 <img src="./assets/icon/question.svg" alt="Mobil Notariat nədir?" width="32" height="32">
                                             </div>
@@ -190,10 +242,10 @@
                                             <div class="mn-how-it-works__card__picture">
                                                 <img src="./assets/images/how-it-works/mobile-notary.png" alt="Etibarnamələr" width="280" height="212">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="mn-how-it-works__card pink">
+                                        <div class="mn-how-it-works__card pink" data-toggle="modal" data-target="#modalHowItWorks" data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm">
                                             <div class="mn-how-it-works__card__icon">
                                                 <img src="./assets/icon/document.svg" alt="Sənədlərin yoxlanılması" width="32" height="32">
                                             </div>
@@ -207,10 +259,10 @@
                                             <div class="mn-how-it-works__card__picture">
                                                 <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr" width="280" height="212">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="mn-how-it-works__card green">
+                                        <div class="mn-how-it-works__card green" data-toggle="modal" data-target="#modalHowItWorks" data-src="https://www.w3schools.com/html/mov_bbb.mp4">
                                             <div class="mn-how-it-works__card__icon">
                                                 <img src="./assets/icon/attorney.svg" alt="Etibarnamələr" width="32" height="32">
                                             </div>
@@ -224,10 +276,10 @@
                                             <div class="mn-how-it-works__card__picture">
                                                 <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr" width="280" height="212">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="mn-how-it-works__card orange">
+                                        <div class="mn-how-it-works__card orange" data-toggle="modal" data-target="#modalHowItWorks" data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm">
                                             <div class="mn-how-it-works__card__icon">
                                                 <img src="./assets/icon/application.svg" alt="Ərizələrin təsdiqlənməsi" width="32" height="32">
                                             </div>
@@ -241,10 +293,10 @@
                                             <div class="mn-how-it-works__card__picture">
                                                 <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr" width="280" height="212">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="mn-how-it-works__card sky-blue">
+                                        <div class="mn-how-it-works__card sky-blue" data-toggle="modal" data-target="#modalHowItWorks" data-src="https://www.w3schools.com/html/mov_bbb.mp4">
                                             <div class="mn-how-it-works__card__icon">
                                                 <img src="./assets/icon/message.svg" alt="Müştərilərdən rəylər" width="32" height="32">
                                             </div>
@@ -258,7 +310,7 @@
                                             <div class="mn-how-it-works__card__picture">
                                                 <img src="./assets/images/how-it-works/attorney.png" alt="Etibarnamələr" width="280" height="212">
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +517,7 @@
                                     <h1 class="section__header__title">Tətbiqi yüklə və sənədləri indi rəsmiləşdir.</h1>
                                     <p class="section__header__desc">Notariat hərəkətləri mobil cihazınızda!</p>
                                 </div>
-                                <button class="mn-banner__cta mn-btn mn-btn--primary mn-btn--lg" data-toggle="modal" data-target="#modalDownload">
+                                <button class="mn-banner__cta mn-btn mn-btn--primary mn-btn--lg d-md-none d-flex" data-toggle="modal" data-target="#modalDownload">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                         <path d="M2.7998 16.9C2.7998 15.5906 2.7998 14.9359 3.09452 14.455C3.25944 14.1859 3.4857 13.9596 3.75481 13.7947C4.23575 13.5 4.89043 13.5 6.1998 13.5H7.2998C9.18542 13.5 10.1282 13.5 10.714 14.0858C11.2998 14.6716 11.2998 15.6144 11.2998 17.5V18.6C11.2998 19.9094 11.2998 20.5641 11.0051 21.045C10.8402 21.3141 10.6139 21.5404 10.3448 21.7053C9.86386 22 9.20918 22 7.8998 22C5.93575 22 4.95372 22 4.23231 21.5579C3.82864 21.3106 3.48925 20.9712 3.24188 20.5675C2.7998 19.8461 2.7998 18.8641 2.7998 16.9Z" stroke="white" stroke-width="1.5" />
                                         <path d="M14.2998 5.4C14.2998 4.09063 14.2998 3.43594 14.5945 2.955C14.7594 2.68589 14.9857 2.45963 15.2548 2.29472C15.7357 2 16.3904 2 17.6998 2C19.6639 2 20.6459 2 21.3673 2.44208C21.771 2.68945 22.1104 3.02884 22.3577 3.4325C22.7998 4.15391 22.7998 5.13594 22.7998 7.1C22.7998 8.40937 22.7998 9.06406 22.5051 9.545C22.3402 9.81411 22.1139 10.0404 21.8448 10.2053C21.3639 10.5 20.7092 10.5 19.3998 10.5H18.2998C16.4142 10.5 15.4714 10.5 14.8856 9.91421C14.2998 9.32843 14.2998 8.38562 14.2998 6.5V5.4Z" stroke="white" stroke-width="1.5" />
@@ -479,6 +531,11 @@
                                     </svg>
                                     <span>İndi yüklə</span>
                                 </button>
+                                <div class="mn-download__platforms d-md-flex d-none">
+                                    <img src="./assets/images/download-now/app-store.png" alt="app store" width="150" height="56">
+                                    <img src="./assets/images/download-now/google-play.png" alt="google play store" width="150" height="56">
+                                    <img src="./assets/images/download-now/app-gallery.png" alt="app gallery" width="150" height="56">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -495,7 +552,7 @@
                             <h1 class="section__header__title">Faydalı resurslardan yararlanın<span class="mn-dot">.</span> </h1>
                             <p class="section__header__desc">Notariat hərəkətləri haqqında bilməli olduğunuz bütün məlumatlar:</p>
                         </div>
-                        <a class="mn-btn mn-btn--lg" href="blogs.html">
+                        <a class="mn-btn mn-btn--lg d-md-none d-flex" href="blogs.html">
                             <span>Daha çoxuna bax</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -609,6 +666,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="section__footer d-md-flex d-none">
+                        <a class="mn-btn mn-btn--lg" href="blogs.html">
+                            <span>Daha çoxuna bax</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             <img class="mn-pattern mn-pattern--4" src="./assets/images/patterns/vector-4.svg" alt="Mobil Notariat">
@@ -623,7 +688,7 @@
                             <h1 class="section__header__title">Tez-tez verilən suallar<span class="mn-dot">.</span> </h1>
                             <p class="section__header__desc">Tətbiqin necə istifadə ediləcəyinə dair addım-addım rəhbər tifadə ediləcəyinə dair:</p>
                         </div>
-                        <a class="mn-btn mn-btn--lg" href="faq.html">
+                        <a class="mn-btn mn-btn--lg d-md-none d-flex" href="faq.html">
                             <span>Daha çoxuna bax</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -698,6 +763,14 @@
                                 <div class="mn-accordion__item__body">Veb-sayt vasitəsilə göstərilən xidmətlərdən kim istifadə edə bilər? Bu xidmətlərdən Azərbaycan Respublikası vətəndaşları, o cümlədən ölkə xaricində olanlar, eləcə də Azərbaycan Respublikası ərazisində müvəqqəti və ya daimi yaşayış üçün icazəsi olan əcnəbilər və vətəndaşlığı olmayan şəxslər istifadə edə bilərlər. </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="section__footer d-md-flex d-none">
+                        <a class="mn-btn mn-btn--lg" href="faq.html">
+                            <span>Daha çoxuna bax</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M4.7998 12H20.7998M20.7998 12L14.7998 6M20.7998 12L14.7998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
         </section>

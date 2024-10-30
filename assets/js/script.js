@@ -17,7 +17,7 @@
     // Add hover animations to section headers
     const sectionHeaders = document.querySelectorAll('.section__header__content');
 
-    sectionHeaders && sectionHeaders.forEach(sectionHeader => {
+    sectionHeaders?.forEach(sectionHeader => {
         sectionHeader.addEventListener('mouseenter', () => {
             const highlight = sectionHeader.querySelector('.mn-highlight');
             const dot = sectionHeader.querySelector('.mn-dot');
@@ -43,6 +43,7 @@
     let charIndex = 0;
     let isDeleting = false;
 
+    // Initialize Typing effect
     const typeEffect = (dynamicText, words) => {
         const currentWord = words[wordIndex];
         const currentChar = currentWord.substring(0, charIndex);
@@ -61,34 +62,6 @@
             wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
             setTimeout(() => typeEffect(dynamicText, words), 800)
         }
-    };
-
-    // Create an odometer with lazy loading using Intersection Observer
-    const createOdometer = (el, value) => {
-        const odometer = new Odometer({
-            el: el,
-            value: 0,
-            format: "(.ddd),dd"
-        });
-
-        let hasRun = false;
-
-        const options = {
-            threshold: [0, 0.9],
-        };
-
-        // Start odometer count when element is visible in the viewport
-        const callback = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting && !hasRun) {
-                    odometer.update(value);
-                    hasRun = true;
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(callback, options);
-        observer.observe(el);
     };
 
     // Initialize odometers for different stat cards
@@ -124,6 +97,16 @@
         header.classList.add('fixed');
     }
 
+    const menuTriggerButtons = document.querySelectorAll('.mn-btn--menu-toggle')
+
+    menuTriggerButtons?.forEach((button) => {
+        button.addEventListener('click', () => {
+            document.querySelector('.header__menu').classList.toggle('show');
+        })
+    })
+
+
+
     // Initialize Swiper for the 'How it works' section
     const swiperHowItWorks = new Swiper(".swiper--how-it-works", {
         slidesPerView: "auto",
@@ -131,6 +114,7 @@
         freeMode: true,
     });
 
+    // Initialize Swiper for the 'Blogs' section
     const swiperFeaturedBlogs = new Swiper(".swiper--top-blogs", {
         pagination: {
             el: ".mn-swiper__pagination",
@@ -176,8 +160,8 @@
         }
     });
 
-    let filterTabs = Array.from(document.querySelectorAll('.mn-tabs__item'))
-    filterTabs && filterTabs.forEach(filterTab => {
+    const filterTabs = document.querySelectorAll('.mn-tabs__item')
+    filterTabs?.forEach(filterTab => {
         filterTab.addEventListener('click', () => {
             if (!filterTab.classList.contains('mn-tabs__item--active')) {
                 document.querySelector('.mn-tabs__item--active').classList.remove('mn-tabs__item--active')
@@ -191,26 +175,12 @@
         });
     })
 
-    function concatValues(obj) {
-        let value = ''; for (let prop in obj) { value += obj[prop]; }
-        return value;
-    }
-
-    // Debounce function using modern syntax
-    function debounce(fn, delay = 100) {
-        let timeout;
-        return (...args) => {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => fn.apply(this, args), delay);
-        };
-    };
-
     // Use value of search field to filter
     const quicksearch = document.querySelector('#searchService');
-    quicksearch && quicksearch.addEventListener('input', debounce(() => {
+    quicksearch?.addEventListener('input', debounce(() => {
         qsRegex = new RegExp(quicksearch.value, 'gi');
         const activeTags = document.querySelectorAll('.mn-tags__item--selected')
-        activeTags && activeTags.forEach(activeTag => {
+        activeTags?.forEach(activeTag => {
             activeTag.classList.remove('mn-tags__item--selected')
         })
         iso.arrange();
@@ -219,11 +189,11 @@
     // Tags handling
     const tags = document.querySelectorAll('.mn-tags__item')
 
-    tags && tags.forEach(tag => {
+    tags?.forEach(tag => {
         tag.addEventListener('click', () => {
             const dataKey = tag.dataset.key
             const activeTags = document.querySelectorAll('.mn-tags__item--selected')
-            activeTags && activeTags.forEach(activeTag => {
+            activeTags?.forEach(activeTag => {
                 activeTag.classList.remove('mn-tags__item--selected')
             })
             tag.classList.add('mn-tags__item--selected')
@@ -258,6 +228,58 @@
             modalAction(modal, 'hide');
         });
     });
+
+    // Accordion functionality
+    document.querySelectorAll('.mn-accordion__item__header').forEach(header => {
+        header.addEventListener('click', function () {
+            const accordionItem = header.closest('.mn-accordion__item');
+            const isActive = accordionItem.classList.contains('mn-accordion__item--show');
+            const activeAccordionItem = document.querySelector('.mn-accordion__item--show');
+
+            // Close currently active accordion
+            if (activeAccordionItem && activeAccordionItem !== accordionItem) {
+                activeAccordionItem.classList.remove('mn-accordion__item--show');
+                const activeBody = activeAccordionItem.querySelector('.mn-accordion__item__body');
+                slideUp(activeBody, 250);
+            }
+
+            // Toggle the clicked accordion
+            if (!isActive) {
+                accordionItem.classList.add('mn-accordion__item--show');
+                const body = accordionItem.querySelector('.mn-accordion__item__body');
+                slideDown(body, 250);
+            }
+        });
+    });
+
+    //
+    document.querySelectorAll('.mn-how-it-works__card').forEach(card => {
+        card.addEventListener('click', function () {
+            const source = card.getAttribute('data-src');
+            const video = document.querySelector(".mn-how-it-works__video")
+            video?.setAttribute('src', source);
+        });
+    });
+
+    document.querySelector(".mn-modal--how-it-works .mn-modal__close")?.addEventListener('click', () => {
+        document.querySelector('.mn-how-it-works__video').setAttribute("src", "#");
+    })
+
+    // Initialize the active accordion item to be open
+    const activeAccordionItem = document.querySelector('.mn-accordion__item--show');
+    if (activeAccordionItem) {
+        const activeBody = activeAccordionItem.querySelector('.mn-accordion__item__body');
+        slideDown(activeBody, 250);
+    }
+
+    // Copy url to share
+    const copyShareUrl = document.querySelector('.mn-share__list__item__link--copy')
+    copyShareUrl?.addEventListener('click', () => {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url)
+            .then(() => showToast('URL kopyalandı!', 'success'))
+            .catch(() => showToast('URL kopyalanmadı!', 'error'));
+    })
 
     // Modal action function
     function modalAction(modal, action, url = null) {
@@ -311,45 +333,22 @@
         }
     }
 
-    // Accordion functionality
-    document.querySelectorAll('.mn-accordion__item__header').forEach(header => {
-        header.addEventListener('click', function () {
-            const accordionItem = header.closest('.mn-accordion__item');
-            const isActive = accordionItem.classList.contains('mn-accordion__item--show');
-            const activeAccordionItem = document.querySelector('.mn-accordion__item--show');
-
-            // Close currently active accordion
-            if (activeAccordionItem && activeAccordionItem !== accordionItem) {
-                activeAccordionItem.classList.remove('mn-accordion__item--show');
-                const activeBody = activeAccordionItem.querySelector('.mn-accordion__item__body');
-                slideUp(activeBody, 250);
-            }
-
-            // Toggle the clicked accordion
-            if (!isActive) {
-                accordionItem.classList.add('mn-accordion__item--show');
-                const body = accordionItem.querySelector('.mn-accordion__item__body');
-                slideDown(body, 250);
-            }
-        });
-    });
-
-    // Initialize the active accordion item to be open
-    const activeAccordionItem = document.querySelector('.mn-accordion__item--show');
-    if (activeAccordionItem) {
-        const activeBody = activeAccordionItem.querySelector('.mn-accordion__item__body');
-        slideDown(activeBody, 250);
+    // Concat object values
+    function concatValues(obj) {
+        let value = ''; for (let prop in obj) { value += obj[prop]; }
+        return value;
     }
 
-    // Copy url to share
-    const copyShareUrl = document.querySelector('.mn-share__list__item__link--copy')
-    copyShareUrl && copyShareUrl.addEventListener('click', () => {
-        const url = window.location.href;
-        navigator.clipboard.writeText(url)
-            .then(() => showToast('URL kopyalandı!', 'success'))
-            .catch(() => showToast('URL kopyalanmadı!', 'error'));
-    })
+    // Debounce function using modern syntax
+    function debounce(fn, delay = 100) {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => fn.apply(this, args), delay);
+        };
+    };
 
+    // Toaster function
     function showToast(message, type) {
         const toast = document.querySelector('.mn-toaster');
         toast.textContent = message;
@@ -360,6 +359,7 @@
         }, 2500);
     }
 
+    // Slide animation functions
     function slideUp(target, duration = 500) {
 
         target.style.transitionProperty = 'height, margin, padding';
@@ -424,4 +424,74 @@
         }
     }
 
+    // Create an odometer with lazy loading using Intersection Observer
+    function createOdometer(el, value) {
+        const odometer = new Odometer({
+            el: el,
+            value: 0,
+            format: "(.ddd),dd"
+        });
+
+        let hasRun = false;
+
+        const options = {
+            threshold: [0, 0.9],
+        };
+
+        // Start odometer count when element is visible in the viewport
+        const callback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && !hasRun) {
+                    odometer.update(value);
+                    hasRun = true;
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(el);
+    };
+
+    // Lazy load
+    function lazyLoad() {
+        if ("IntersectionObserver" in window) {
+            let lazyImgObserver = new IntersectionObserver((entries, lazyImgObserver) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0.0) {
+                        let img = entry.target;
+                        if (!img.hasAttribute('src')) {
+                            img.setAttribute('src', img.dataset.src);
+                            img.classList.remove('lazy-load')
+                        }
+                    }
+                });
+            });
+            let lazyImages = document.querySelectorAll('.lazy-load');
+            for (let img of lazyImages) {
+                lazyImgObserver.observe(img);
+            }
+
+            // let lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+            //     entries.forEach(function (video) {
+            //         if (video.isIntersecting) {
+            //             for (let source in video.target.children) {
+            //                 let videoSource = video.target.children[source];
+            //                 if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE" && !videoSource.hasAttribute('src')) {
+            //                     videoSource.src = videoSource.dataset.src;
+            //                 }
+            //             }
+            //             video.target.load();
+            //             video.target.classList.remove("lazy-load");
+            //             lazyVideoObserver.unobserve(video.target);
+            //         }
+            //     });
+            // });
+
+            // let lazyVideos = document.querySelectorAll("video");
+            // for (let lazyVideo of lazyVideos) {
+            //     lazyVideoObserver.observe(lazyVideo);
+            // }
+        }
+    }
 })();
+
