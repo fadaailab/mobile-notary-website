@@ -26,40 +26,60 @@
         <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
     </div>
     <!-- Preloader End -->
-    <!-- Header -->
+    <!-- Header  -->
     <header class="header">
         <div class="container">
             <div class="header__content">
                 <div class="header__content__group">
                     <div class="header__content__group__item">
                         <a href="index.html" class="header__logo">
-                            <img class="d-mobile-none" src="./assets/images/logo-dark.svg" alt="Mobil Notariat">
+                            <img src="./assets/images/logo-dark.svg" alt="Mobil Notariat" width="112" height="44">
                         </a>
                     </div>
                 </div>
-                <div class="header__content__group grow">
+                <div class="header__content__group grow ">
                     <div class="header__content__group__item">
-                        <ul class="header__menu-list">
-                            <li>
-                                <a href="about.html">Haqqımızda</a>
-                            </li>
-                            <li>
-                                <a href="services.html">Xidmətlər</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a class="active" href="blogs.html">Bloq</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Əlaqə</a>
-                            </li>
-                        </ul>
+                        <div class="header__menu">
+                            <div class="header__menu__title d-lg-flex d-none">
+                                <span>Menu</span>
+                                <button class="mn-btn mn-btn--icon mn-btn--secondary mn-btn--menu-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="header__menu__body">
+                                <ul class="header__menu__list">
+                                    <li>
+                                        <a href="about.html">Haqqımızda</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Xidmətlər</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="blogs.html">Bloq</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Əlaqə</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__menu__footer d-lg-flex d-none">
+                                <button class="mn-btn mn-btn--primary mn-btn--lg">
+                                    <span>Hesabınıza daxil olun</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M4.2998 12H20.2998M20.2998 12L14.2998 6M20.2998 12L14.2998 18" stroke="#7C94E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="header__content__group">
-                    <div class="header__content__group__item">
+                    <div class="header__content__group__item d-lg-none">
                         <button class="mn-btn mn-btn--primary">
                             <span>Daxil ol</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -67,10 +87,26 @@
                             </svg>
                         </button>
                     </div>
+                    <div class="header__content__group__item d-lg-flex d-none">
+                        <a href="#" class="mn-btn  mn-btn--icon mn-btn--secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M4 12H14M14 12L11 9M14 12L11 15" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <button class="mn-btn  mn-btn--icon mn-btn--secondary mn-btn--menu-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 7L4 7" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M20 12L4 12" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M20 17L4 17" stroke="#121F4A" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Header  -->
     <main class="main main--blog">
         <section class="section section--blog">
             <div class="container">
