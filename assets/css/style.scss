@@ -262,6 +262,10 @@ img {
   --ts-delay-fast: 50ms;
   --ts-delay-medium: 100ms;
   --ts-delay-slow: 150ms;
+
+  // Animations
+  --tadaTranslateY: -4px;
+  --tadaRotate: -4deg;
 }
 
 /* ------------------------------
@@ -1010,7 +1014,7 @@ body {
   padding: 4px 15px;
   border-radius: 18px;
   margin: 0 4px;
-  transform: rotate(-4deg) translateY(-4px);
+  transform: rotate(var(--tadaRotate)) translateY(var(--tadaTranslateY));
   background: linear-gradient(85deg, #7c94e0 -2.24%, #e07cca 106.46%);
   box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.12);
 
@@ -1576,6 +1580,12 @@ body {
   align-items: center;
   justify-content: center;
   overflow: auto;
+  padding-bottom: 2px;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
 
   &__item {
     display: flex;
@@ -2972,29 +2982,29 @@ body {
 
 @keyframes tada {
   0% {
-    transform: scale3d(1, 1, 1) rotate(-4deg) translateY(-4px);
+    transform: scale3d(1, 1, 1) rotate(var(--tadaRotate)) translateY(var(--tadaTranslateY));
   }
 
   10%,
   20% {
-    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -4deg) translateY(-4px);
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -4deg) translateY(var(--tadaTranslateY));
   }
 
   30%,
   50%,
   70%,
   90% {
-    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 3deg) translateY(-4px);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 3deg) translateY(var(--tadaTranslateY));
   }
 
   40%,
   60%,
   80% {
-    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -4deg) translateY(-4px);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -4deg) translateY(var(--tadaTranslateY));
   }
 
   100% {
-    transform: scale3d(1, 1, 1) rotate(-4deg) translateY(-4px);
+    transform: scale3d(1, 1, 1) rotate(var(--tadaRotate)) translateY(var(--tadaTranslateY));
   }
 }
 

@@ -194,6 +194,7 @@
   }
   .section--welcome .section__header .mn-highlight {
     font-size: var(--fs-h6);
+    transform: rotate(-4deg) translateY(-4px);
   }
   .footer__body--secondary {
     flex-direction: column;
@@ -216,6 +217,10 @@
   }
   .mn-highlight {
     font-size: var(--fs-b3);
+    transform: rotate(-3deg) translateY(1px);
+  }
+  .mn-highlight.start-animation {
+    animation: none;
   }
   .mn-stats__body {
     flex-direction: column;

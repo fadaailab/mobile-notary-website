@@ -276,6 +276,7 @@
 
           .mn-highlight {
             font-size: var(--fs-h6);
+            transform: rotate(-4deg) translateY(-4px);
           }
         }
       }
@@ -320,6 +321,11 @@
 
   .mn-highlight {
     font-size: var(--fs-b3);
+    transform: rotate(-3deg) translateY(1px);
+
+    &.start-animation {
+      animation: none;
+    }
   }
 
   .mn-stats {
