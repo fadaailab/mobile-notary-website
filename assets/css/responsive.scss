@@ -422,7 +422,7 @@
 
     &__content {
       &--center {
-        align-items: flex-start;
+        align-items: stretch;
       }
     }
 
@@ -442,7 +442,17 @@
             align-items: flex-start;
           }
         }
+
+        &__body {
+          align-items: stretch;
+        }
       }
+    }
+  }
+
+  .mn-stats {
+    &__card {
+      width: 100%;
     }
   }
 }

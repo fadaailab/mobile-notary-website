@@ -283,7 +283,7 @@
     display: none !important;
   }
   .section__content--center {
-    align-items: flex-start;
+    align-items: stretch;
   }
   .section__footer .mn-btn {
     width: 100%;
@@ -294,5 +294,11 @@
   }
   .section--welcome .section__header__content {
     align-items: flex-start;
+  }
+  .section--welcome .section__body {
+    align-items: stretch;
+  }
+  .mn-stats__card {
+    width: 100%;
   }
 }/*# sourceMappingURL=responsive.css.map */
