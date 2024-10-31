@@ -338,4 +338,20 @@
   .mn-form__body {
     gap: 24px;
   }
+  .mn-blog {
+    gap: 32px;
+  }
+  .mn-blog__picture {
+    height: 228px;
+  }
+  .mn-service {
+    gap: 32px;
+  }
+  .mn-service__picture {
+    height: 228px;
+  }
+  .mn-service__picture .mn-overlay svg {
+    width: 100px;
+    height: 100px;
+  }
 }/*# sourceMappingURL=responsive.css.map */

@@ -506,4 +506,25 @@
       gap: 24px;
     }
   }
+
+  .mn-blog {
+    gap: 32px;
+
+    &__picture {
+      height: 228px;
+    }
+  }
+
+  .mn-service {
+    gap: 32px;
+
+    &__picture {
+      height: 228px;
+
+      .mn-overlay svg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
 }

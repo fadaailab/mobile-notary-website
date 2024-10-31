@@ -2203,6 +2203,13 @@ body {
   gap: 6px;
   font-size: var(--fs-b4);
   line-height: var(--lh-b4);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 
   &__item {
     text-decoration: none;
@@ -2656,10 +2663,12 @@ body {
   &__picture {
     overflow: hidden;
     border-radius: 16px;
+    height: 315px;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -2746,10 +2755,12 @@ body {
     overflow: hidden;
     border-radius: 16px;
     cursor: pointer;
+    height: 315px;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
