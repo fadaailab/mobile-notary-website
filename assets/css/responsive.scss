@@ -80,7 +80,6 @@
     &__menu {
       position: fixed;
       display: flex;
-      background: var(--base-1);
       top: 0;
       left: 100%;
       bottom: 0;
@@ -91,6 +90,11 @@
       opacity: 0;
       visibility: hidden;
       z-index: 999;
+      background-image: url("../images/patterns/vector-2.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: contain;
+      background-color: var(--base-1);
 
       &.show {
         left: 0;
@@ -130,15 +134,15 @@
 
       &__list {
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
 
         li {
           display: flex;
 
           a {
-            padding: 24px 32px;
-            font-size: var(--fs-h6);
-            line-height: var(--lh-h6);
+            padding: 16px 24px;
+            font-size: 18px;
+            line-height: 1.2;
             border-radius: 16px;
             border-radius: 100px;
 
@@ -172,6 +176,24 @@
         }
       }
     }
+
+    &--about {
+      #{$section}__body {
+        flex-direction: column-reverse;
+        gap: 16px;
+      }
+    }
+
+    &--contact {
+      #{$section}__header {
+        width: 100%;
+      }
+
+      #{$section}__content {
+        align-items: stretch;
+        flex-direction: column;
+      }
+    }
   }
 
   .mn-services {
@@ -183,8 +205,16 @@
 
   .mn-pattern {
     &--1 {
+      top: 168px;
+    }
+
+    &--2 {
       top: 0;
-      right: 0;
+    }
+
+    &--3 {
+      top: auto;
+      bottom: 0;
     }
   }
 
@@ -254,10 +284,6 @@
           display: none;
         }
       }
-    }
-
-    &__footer {
-      padding-top: 12px;
     }
 
     &--welcome {
@@ -390,6 +416,14 @@
         width: 100%;
       }
     }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+    }
   }
 
   .mn-top-blogs {
@@ -401,6 +435,14 @@
 
   .mn-tags {
     justify-content: flex-start;
+  }
+
+  .mn-tabs {
+    justify-content: flex-start;
+
+    &__item {
+      flex-grow: 1;
+    }
   }
 }
 
@@ -428,7 +470,7 @@
 
     &__footer {
       .mn-btn {
-        width: 100%;
+        flex-grow: 1;
       }
     }
 
@@ -453,6 +495,15 @@
   .mn-stats {
     &__card {
       width: 100%;
+    }
+  }
+
+  .mn-form {
+    gap: 24px;
+    padding: 24px;
+
+    &__body {
+      gap: 24px;
     }
   }
 }

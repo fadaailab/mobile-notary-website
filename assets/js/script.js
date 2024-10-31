@@ -231,26 +231,24 @@
 
     // Accordion functionality
     document.querySelectorAll('.mn-accordion__item__header').forEach(header => {
-        header.addEventListener('click', function () {
+        header.addEventListener('click', () => {
             const accordionItem = header.closest('.mn-accordion__item');
             const isActive = accordionItem.classList.contains('mn-accordion__item--show');
-            const activeAccordionItem = document.querySelector('.mn-accordion__item--show');
 
-            // Close currently active accordion
-            if (activeAccordionItem && activeAccordionItem !== accordionItem) {
-                activeAccordionItem.classList.remove('mn-accordion__item--show');
-                const activeBody = activeAccordionItem.querySelector('.mn-accordion__item__body');
-                slideUp(activeBody, 250);
-            }
+            // Close any open accordion item
+            document.querySelectorAll('.mn-accordion__item--show').forEach(item => {
+                item.classList.remove('mn-accordion__item--show');
+                slideUp(item.querySelector('.mn-accordion__item__body'), 250);
+            });
 
-            // Toggle the clicked accordion
+            // If the clicked item was not active, open it
             if (!isActive) {
                 accordionItem.classList.add('mn-accordion__item--show');
-                const body = accordionItem.querySelector('.mn-accordion__item__body');
-                slideDown(body, 250);
+                slideDown(accordionItem.querySelector('.mn-accordion__item__body'), 250);
             }
         });
     });
+
 
     //
     document.querySelectorAll('.mn-how-it-works__card').forEach(card => {

@@ -623,10 +623,17 @@ body {
 }
 .section--about .section__body__graphic {
   flex: 1;
+  max-width: 536px;
 }
 .section--about .section__body__graphic img {
   width: 100%;
   height: auto;
+}
+.section--contact .section__header {
+  width: 452px;
+}
+.section--contact .section__body {
+  flex-grow: 1;
 }
 
 /* ------------------------------
@@ -886,6 +893,7 @@ body {
 }
 .mn-stats__header {
   position: relative;
+  align-self: flex-start;
   color: var(--black-13);
   font-size: var(--fs-b3);
   line-height: var(--lh-b3);
@@ -1343,8 +1351,9 @@ body {
   padding-bottom: 2px;
 }
 .mn-tags::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
+  width: 0;
+  height: 0;
+  display: none;
 }
 .mn-tags__item {
   display: flex;
@@ -1779,7 +1788,6 @@ body {
 }
 .mn-accordion__item__header {
   display: flex;
-  align-items: center;
   gap: 16px;
   font-size: var(--fs-b1);
   line-height: var(--lh-b1);
@@ -1887,6 +1895,7 @@ body {
   transition: var(--ts-medium);
   color: var(--black-8);
   transition: var(--ts-medium);
+  flex-shrink: 0;
 }
 .mn-breadcrumbs__item--current {
   font-weight: var(--fw-bold);
@@ -2220,7 +2229,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 16px 0;
+  padding-bottom: 16px;
+  overflow: auto;
+}
+.mn-tabs::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 .mn-tabs__item {
   padding: 12px;
@@ -2228,6 +2243,8 @@ body {
   color: var(--black-13);
   font-size: var(--fs-b2);
   line-height: var(--lh-b2);
+  flex-shrink: 0;
+  white-space: nowrap;
   cursor: pointer;
 }
 .mn-tabs__item--active {
@@ -2324,7 +2341,7 @@ body {
 }
 
 .mn-contact {
-  width: 645px;
+  max-width: 644px;
 }
 .mn-contact__list {
   display: flex;
