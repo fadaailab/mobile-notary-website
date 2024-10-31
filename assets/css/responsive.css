@@ -200,6 +200,11 @@
   .section__header__title .mn-services__card__icon {
     display: none;
   }
+  .section__header--row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
   .section--welcome .section__content {
     gap: 40px;
   }

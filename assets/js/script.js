@@ -275,8 +275,8 @@
     copyShareUrl?.addEventListener('click', () => {
         const url = window.location.href;
         navigator.clipboard.writeText(url)
-            .then(() => showToast('URL kopyalandı!', 'success'))
-            .catch(() => showToast('URL kopyalanmadı!', 'error'));
+            .then(() => showToast('Link kopyalandı!', 'success'))
+            .catch(() => showToast('Link kopyalanmadı!', 'error'));
     })
 
     // Modal action function
